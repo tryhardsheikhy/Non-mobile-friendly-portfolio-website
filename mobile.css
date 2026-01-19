@@ -1,0 +1,414 @@
+* {
+        padding: 0;
+        margin: 0;
+      }
+      .light-blue {
+        background-color: #61b0c4;
+      }
+
+      .darker-blue {
+        background-color: #3282a0;
+      }
+
+      .darkest-blue {
+        background-color: #214e77;
+      }
+
+      #hero .container {
+        display: grid;
+        grid-template-rows: 234px 86px 160px 280px;
+        grid-template-columns: 1fr 2fr 1fr;
+        padding-top: 50px;
+        background-color: #61b0c4;
+      }
+
+      .image {
+        grid-area: 1 / 2 / 4 / 2;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .headers {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+        grid-area: 4 / 1 / -1 / -1;
+      }
+
+      @font-face {
+        font-family: "fineday";
+        src: url("./fineday-style-one_freefontdownload_org/fineday-style-one.woff2")
+          format("woff2");
+      }
+
+      @font-face {
+        font-family: "cubao";
+        src: url("./cubao-free/Cubao_Free_Wide.otf");
+      }
+
+      #hero h2 {
+        font-family: "fineday", sans-serif;
+        font-size: 69px;
+        margin-top: -30px;
+      }
+
+      #hero h1 {
+        font-family: "cubao", sans-serif;
+        font-size: 200px;
+        color: #ff2e63;
+        margin: -25px;
+      }
+
+      .goku {
+        height: 140px;
+        width: 230px;
+        margin-bottom: -70px;
+        z-index: 2;
+      }
+
+      .pixel {
+        height: 410px;
+      }
+
+      #intro .container {
+        display: grid;
+        grid-template-rows: 234px 86px 160px 280px;
+        grid-template-columns: 1fr 10fr 1fr;
+        padding-top: 50px;
+        background-color: #61b0c4;
+      }
+
+      .main {
+        grid-area: 1 / 2 / 4 / 2;
+      }
+
+      .card {
+        display: flex;
+        height: 500px;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        background-color: #ff2e63;
+        font-family: "League Spartan", sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 80px;
+        border-top: 20px solid #1a306c;
+        border-left: 20px solid #1a306c;
+        z-index: 2;
+      }
+
+      .me {
+        border-radius: 50%;
+        height: 400px;
+        padding: 30px;
+      }
+
+      .naruto {
+        display: flex;
+        justify-content: right;
+        margin-top: -50px;
+      }
+
+      .pixelnaruto {
+        height: 300px;
+      }
+
+      .textbox {
+        height: 200px;
+        margin-right: -100px;
+      }
+
+      #skills {
+        background-color: #61b0c4;
+        position: relative;
+        min-height: 810px; /* reserve space so things above don't shift (adjust if needed) */
+        color: white;
+        font-family: "League Spartan", sans-serif;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 70px;
+      }
+
+      #skills .background {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        height: 760px; /* sum of your grid rows: 234 + 86 + 160 + 280 */
+        display: grid;
+        background-color: #61b0c4;
+        grid-template-rows: 234px 86px 160px 280px;
+        padding-top: 50px;
+        z-index: 0;
+      }
+
+      .content {
+        padding-left: 50px;
+        padding-right: 50px;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 45fr 10fr 45fr;
+        grid-template-rows: repeat(2, 380px);
+      }
+
+      .content div {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content p {
+        padding: 50px;
+      }
+
+      .bluetext {
+        color: black;
+      }
+
+      .redtext {
+        background-color: #ff2e63;
+        grid-area: 1 / 1 / 2 / 3;
+        border-top: 10px solid #1a306c;
+        border-left: 10px solid #1a306c;
+      }
+
+      .bluetext {
+        background-color: #ddeced;
+        grid-area: 2 / 2 / -1 / -1;
+        border-top: 10px solid #86bdcd;
+        border-left: 10px solid #86bdcd;
+        margin-top: -10px;
+      }
+
+            #endGame {
+        display: grid;
+        grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
+        height: 760px;
+        background-color: #61b0c4;
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        font-size: 30px;
+      }
+
+      #endGame > div {
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        align-items: center;
+        padding-bottom: 50px;
+      }
+
+      .aboutMe {
+        padding: 0px 100px;
+        margin-top: 30px;
+      }
+
+      /* Mobile / small-screen overrides */
+@media (max-width: 600px) {
+  /* Make hero stack vertically and reduce large headers */
+  #hero .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  .image {
+    grid-area: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .goku {
+    height: 80px;
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  .pixel {
+    height: 120px;
+    width: auto;
+  }
+
+  .headers {
+    grid-area: auto;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  #hero h2 {
+    font-size: 28px;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 48px;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Intro section: stack and scale card and images */
+  #intro .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  .main {
+    grid-area: auto;
+    padding: 0 10px;
+  }
+
+  .card {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .me {
+    height: 160px;
+    width: 160px;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .naruto {
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .textbox {
+    height: 120px;
+    margin-right: 0;
+  }
+
+  .pixelnaruto {
+    height: 120px;
+  }
+
+  /* Skills: single column and readable font sizes */
+  #skills {
+    min-height: auto;
+    padding: 20px 10px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  #skills .background {
+    position: relative;
+    height: auto;
+    display: block;
+    padding-top: 0;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content div {
+    height: auto;
+    padding: 10px 0;
+    justify-content: center;
+  }
+
+  .content p {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .redtext {
+    grid-area: auto;
+    border-top: 6px solid #1a306c;
+    border-left: 6px solid #1a306c;
+  }
+
+  .bluetext {
+    grid-area: auto;
+    border-top: 6px solid #86bdcd;
+    border-left: 6px solid #86bdcd;
+    margin-top: 0;
+  }
+
+  /* End game / footer stacking and smaller fonts */
+  #endGame {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    height: auto;
+    padding: 20px 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #endGame > div {
+    justify-content: center;
+    padding-bottom: 12px;
+    text-align: center;
+  }
+
+  .aboutMe {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .gameOver img {
+    height: 140px;
+    width: auto;
+  }
+
+  .contactMe {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 0;
+  }
+
+  .links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+  }
+
+  .copyright {
+    padding-bottom: 0;
+    font-size: 12px;
+  }
+}
+
+/* Optional extra small tweaks for very small devices */
+@media (max-width: 360px) {
+  #hero h2 { font-size: 22px; }
+  #hero h1 { font-size: 38px; }
+  .card { font-size: 18px; }
+  .me { height: 140px; width: 140px; }
+}
